@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <title>Christmas fundraiser</title>
+  </head>
+
+  <body class="profile-app">
+    <aside class="snow-cont aside-left"></aside>
+
+    <main>
+      <!---->
+      <nav></nav>
+
+      <h1>Hello, <span id="user-name">user</span>!</h1>
+
+      <div class="grid-top">
+        <div class="user-card">
+          <h3>Payment information:</h3>
+          <form name="payment-info">
+            <label for="cname">Name on Card</label>
+            <input
+              type="text"
+              id="ccname"
+              name="cardname"
+              placeholder="John More Doe"
+              pattern="{A-Za-z}"
+              title="Letters only"
+            />
+            <br />
+            <label for="ccnum">Credit card number</label>
+            <input
+              type="text"
+              id="ccnum"
+              name="cardnumber"
+              placeholder="1111-2222-3333-4444"
+            />
+            <br />
+            <label for="expmonth">Exp Month</label>
+            <input
+              type="text"
+              id="expmonth"
+              name="expmonth"
+              placeholder="September"
+            />
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input
+                  type="text"
+                  id="expyear"
+                  name="expyear"
+                  placeholder="2018"
+                />
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352" />
+              </div>
+            </div>
+            <br />
+            <button id="save-card-btn" type="submit" name="save-btn">
+              Save
+            </button>
+          </form>
+          <div class="cc-anim">
+            <img id="cc" src="images/cc-600-400.png" alt="" />
+            <button class="">Edit details</button>
+          </div>
+        </div>
+
+        <div class="donation-info">
+          <div id="amount-don">
+            <p>To this moment you have donated:</p>
+            <h3>this amount</h3>
+          </div>
+          <ul id="gifts-don"></ul>
+          <div>
+            <p>
+              Your donation will make at least
+              <span id="children-happy">X</span> children happy!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="donations-grid">
+        <div class="money-don">
+          <section>
+            <form name="money-donation">
+              <p>Donate a sum:</p>
+              <select name="amount" size="5">
+                <option value="50">50kr</option>
+                <option value="100">100kr</option>
+                <option value="150">150kr</option>
+                <option value="200">200kr</option>
+                <option value="200">500kr</option>
+              </select>
+              <br />
+              <br />
+              <input type="submit" />
+            </form>
+          </section>
+        </div>
+        <div class="gift-don">
+          <section>
+            <form name="gift-donation">
+              <p>Buy a gift</p>
+              <select name="gift" size="1">
+                <option name="doll" value="doll">Doll /price 150kr/</option>
+                <option name="lego" value="lego">Lego set /price 500kr/</option>
+                <option name="puzzle" value="puzzle"
+                  >Puzzle /price 100kr/</option
+                >
+                <option name="car" value="car">Car /price 200kr/</option>
+                <option name="coloring-book" value="coloringBook"
+                  >Coloring book + pencils /price 120kr/</option
+                >
+                <option name="horse" value="ridingHorse"
+                  >Rocking horse /price 300kr/</option
+                >
+              </select>
+              <br />
+              <input type="submit" />
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <button id="log-out">Log out</button>
+    </main>
+
+    <aside class="snow-cont aside-right"></aside>
+  </body>
+  <script src="scripts/profile.js"></script>
+</html>

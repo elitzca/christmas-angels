@@ -1,0 +1,90 @@
+$champagne: #dcd8cd;
+$beige: #c1b09e;
+$brown: #7a5d53;
+$lightBlue: #8db8af;
+$lightGreen: #839d5c;
+$darkGreen: #5e7151;
+$red: #b3283f;
+$darkRed: #812122;
+$mainFont: "ZCOOL XiaoWei", serif;
+
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.log-app main {
+  width: 20%;
+  margin: 0 40%;
+}
+
+header {
+  float: right;
+  margin: 2vh 2vw;
+}
+
+button {
+  margin: 0vh 0.5vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.turn {
+  animation: turnCard 1s ease 0.1s forwards;
+}
+
+@keyframes turnCard {
+  0% {
+    transform: rotateY(100deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* ###################################
+
+PROFILE PAGE:
+
+################################### */
+
+body.profile-app {
+  background-color: $champagne;
+  font-family: $mainFont;
+}
+
+img#cc {
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 1024px) {
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body.profile-app {
+    padding: 5vh 15%;
+  }
+
+  .grid-top,
+  .donations-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .user-card,
+  .donation-info,
+  .money-don,
+  .gift-don {
+    padding: 5% 10%;
+    border: 1px solid black; //remove later
+  }
+}

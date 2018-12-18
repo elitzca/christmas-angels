@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign up form</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+
+  <body class="log-app">
+    <header>
+      <button id="logCorner">Log in</button>
+      <button id="signCorner">Sign up</button>
+    </header>
+
+    <main>
+      <section class="hidden" id="log-in">
+        <form>
+          <label>Username:</label> <br />
+          <input type="text" name="usernameLogIn" /> <br />
+          <button>Log in</button>
+        </form>
+      </section>
+      <section class="hidden" id="sign-up">
+        <form>
+          <label>Username:</label> <br />
+          <input
+            id="username"
+            type="text"
+            name="username"
+            placeholder="username"
+          />
+          <br />
+          <label>First name:</label> <br />
+          <input id="first" type="text" name="firstName" placeholder="Ana" />
+          <br />
+          <label>Last name:</label> <br />
+          <input id="last" type="text" name="lastName" placeholder="Brown" />
+          <br />
+          <br />
+          <input id="submit-btn" type="submit" name="submit-btn" />
+        </form>
+      </section>
+    </main>
+  </body>
+  <script src="scripts/sign-up.js"></script>
+</html>

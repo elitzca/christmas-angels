@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard</title>
+    <style>
+      section {
+        margin: 5%;
+      }
+
+      .donations-raised {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+      }
+
+      .gifts-raised {
+        display: grid;
+        grid-template-columns: repeat(7, 12%);
+        grid-gap: 2%;
+      }
+
+      .gifts-raised div {
+        padding: 12%;
+        background-color: rgb(135, 135, 216);
+      }
+
+      .don-bar {
+        position: relative;
+      }
+
+      .bar-background {
+        position: relative;
+        width: 600px;
+        height: 30px;
+        background-color: rgb(250, 231, 178);
+      }
+
+      .money-bar {
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        background-color: darkgoldenrod;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="donations-raised">
+      <div class="money-total">
+        <p>Money donated in total</p>
+        <h3></h3>
+      </div>
+      <div class="people-total">
+        <p>Number of people donated in total</p>
+        <h3></h3>
+      </div>
+      <div class="money-average">
+        <p>Average sum people donate</p>
+        <h3></h3>
+      </div>
+      <div class="children-happy">
+        <p>Number of children with gift</p>
+        <h3></h3>
+      </div>
+    </section>
+
+    <section class="gifts-raised">
+      <div class="gifts-total">
+        <p>Gifts donated in total</p>
+        <h3></h3>
+      </div>
+      <div class="dolls-div">
+        <p>DOLLS</p>
+        <h3></h3>
+      </div>
+      <div class="cars-div">
+        <p>CARS</p>
+        <h3></h3>
+      </div>
+      <div class="lego-div">
+        <p>LEGO</p>
+        <h3></h3>
+      </div>
+      <div class="puzzle-div">
+        <p>PUZZLE</p>
+        <h3></h3>
+      </div>
+      <div class="horses-div">
+        <p>HORSES</p>
+        <h3></h3>
+      </div>
+      <div class="books-div">
+        <p>BOOKS</p>
+        <h3></h3>
+      </div>
+    </section>
+
+    <section class="don-bar">
+      <div class="bar-background"></div>
+      <div class="money-bar"></div>
+    </section>
+  </body>
+  <script src="scripts/dashboard.js"></script>
+</html>
