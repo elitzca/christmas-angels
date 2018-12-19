@@ -13,7 +13,38 @@
   </head>
 
   <body class="profile-app">
-    <aside class="snow-cont aside-left"></aside>
+    <aside class="snow-cont aside-left ">
+      <img
+        id="sf1"
+        class="snow"
+        src="images/Snowflakes-Transparent-Background-PNG.png"
+        alt=""
+      />
+      <img
+        id="sf2"
+        class="snow"
+        src="images/Snowflakes-Transparent-Background-PNG.png"
+        alt=""
+      />
+      <img
+        id="sf3"
+        class="snow"
+        src="images/Snowflakes-Transparent-Background-PNG.png"
+        alt=""
+      />
+      <img
+        id="sf4"
+        class="snow"
+        src="images/Snowflakes-Transparent-Background-PNG.png"
+        alt=""
+      />
+      <img
+        id="sf5"
+        class="snow"
+        src="images/Snowflakes-Transparent-Background-PNG.png"
+        alt=""
+      />
+    </aside>
 
     <main>
       <!---->
@@ -21,98 +52,144 @@
 
       <h1>Hello, <span id="user-name">user</span>!</h1>
 
-      <div class="grid-top">
-        <div class="user-card">
-          <h3>Payment information:</h3>
-          <form name="payment-info">
-            <label for="cname">Name on Card</label>
-            <input
-              type="text"
-              id="ccname"
-              name="cardname"
-              placeholder="John More Doe"
-              pattern="{A-Za-z}"
-              title="Letters only"
-            />
-            <br />
-            <label for="ccnum">Credit card number</label>
-            <input
-              type="text"
-              id="ccnum"
-              name="cardnumber"
-              placeholder="1111-2222-3333-4444"
-            />
-            <br />
-            <label for="expmonth">Exp Month</label>
-            <input
-              type="text"
-              id="expmonth"
-              name="expmonth"
-              placeholder="September"
-            />
-            <div class="row">
-              <div class="col-50">
+      <div class="welcome-text">
+        <p>
+          It is nice to have you here! We are glad you decided to help spread
+          the love and happiness this Christmas! In the spirit of the holiday
+          our mission is to be good and give something little to those less
+          fortunate than us! Your donations will be turned into gifts for
+          children in foster care.
+        </p>
+        <p>
+          Each and every donation is valuable! The only rule is that it comes
+          from the heart!
+        </p>
+      </div>
+
+      <div class="ribbon">
+        <svg
+          id="Layer_1"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 362 113.2"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #b3283f;
+              }
+            </style>
+          </defs>
+          <title>ribbon2</title>
+          <path
+            class="cls-1"
+            d="M166.87,243.52c-7.24-.85-85.17-10.65-107.1-45.89-3.25-5.23-14.86-23.88,2.76-40.77,10.93-10.47,32.12-19.34,49.69-19.84,42.29-1.21,88.65,45.36,120.79,113-78.65-75-111-88.73-125.66-85.94-3.53.67-15.6,4.13-18.36,10.62s5,12.14,7.35,13.77a195.55,195.55,0,0,0,30.86,22.68C164,233.26,205.75,244.38,233,250Z"
+            transform="translate(-53 -137)"
+          />
+          <path
+            class="cls-1"
+            d="M301.13,244.45c7.24-.75,85.17-9.44,107.1-40.69,3.25-4.64,14.86-21.18-2.76-36.15-10.93-9.29-32.12-17.14-49.69-17.59C313.5,148.95,267.15,190.24,235,250.2c78.65-66.52,111-78.68,125.66-76.21,3.53.6,15.6,3.67,18.36,9.42s-5,10.77-7.35,12.21a196,196,0,0,1-30.86,20.11C304,235.35,262.25,245.22,235,250.2Z"
+            transform="translate(-53 -137)"
+          />
+        </svg>
+      </div>
+
+      <div class="present-background">
+        <div class="grid-top">
+          <div class="user-card">
+            <h3>Payment information:</h3>
+            <form name="payment-info">
+              <div class="form-grid">
+                <label for="cname">Name on Card</label>
+                <input
+                  type="text"
+                  id="ccname"
+                  name="cardname"
+                  placeholder="John Doe"
+                />
+                <label for="ccnum">Credit card №</label>
+                <input
+                  type="text"
+                  id="ccnum"
+                  name="cardnumber"
+                  placeholder="1111-2222-3333-4444"
+                />
+                <label for="expmonth">Exp Month</label>
+                <input
+                  type="text"
+                  id="expmonth"
+                  name="expmonth"
+                  placeholder="01"
+                />
                 <label for="expyear">Exp Year</label>
                 <input
                   type="text"
                   id="expyear"
                   name="expyear"
-                  placeholder="2018"
+                  placeholder="2019"
                 />
-              </div>
-              <div class="col-50">
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="352" />
               </div>
-            </div>
-            <br />
-            <button id="save-card-btn" type="submit" name="save-btn">
-              Save
-            </button>
-          </form>
-          <div class="cc-anim">
-            <img id="cc" src="images/cc-600-400.png" alt="" />
-            <button class="">Edit details</button>
-          </div>
-        </div>
 
-        <div class="donation-info">
-          <div id="amount-don">
-            <p>To this moment you have donated:</p>
-            <h3>this amount</h3>
-          </div>
-          <ul id="gifts-don"></ul>
-          <div>
-            <p>
-              Your donation will make at least
-              <span id="children-happy">X</span> children happy!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="donations-grid">
-        <div class="money-don">
-          <section>
-            <form name="money-donation">
-              <p>Donate a sum:</p>
-              <select name="amount" size="5">
-                <option value="50">50kr</option>
-                <option value="100">100kr</option>
-                <option value="150">150kr</option>
-                <option value="200">200kr</option>
-                <option value="200">500kr</option>
-              </select>
-              <br />
-              <br />
-              <input type="submit" />
+              <input
+                id="save-card-btn"
+                class="style-button"
+                type="submit"
+                name="save-btn"
+                value="Save"
+              />
             </form>
-          </section>
+            <div class="cc-anim">
+              <img id="cc" src="images/cc-600-400.png" alt="" />
+              <button class="style-button">Edit details</button>
+            </div>
+          </div>
+
+          <div class="donation-info">
+            <div id="amount-don">
+              <h3>To this moment you have donated:</h3>
+              <div class="grid-sq-2">
+                <div>
+                  <p id="amount-donated">this amount</p>
+                  <ul id="gifts-don"></ul>
+                </div>
+                <div><img src="images/9-1024.png" alt="" /></div>
+              </div>
+              <p>
+                Your donation will make at least
+                <span id="children-happy">X</span> children happy!
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="gift-don">
-          <section>
+
+        <div class="donations-grid">
+          <div class="money-don">
+            <!-- <section> -->
+            <form name="money-donation">
+              <div class="grid-sq-3">
+                <div>
+                  <h3>Donate a sum:</h3>
+                  <select name="amount" size="5">
+                    <option value="50">50kr</option>
+                    <option value="100">100kr</option>
+                    <option value="150">150kr</option>
+                    <option value="200">200kr</option>
+                    <option value="200">500kr</option>
+                  </select>
+                </div>
+                <div><img src="images/pig-300x385.png" alt="" /></div>
+              </div>
+              <input class="style-button" type="submit" value="Donate" />
+            </form>
+
+            <!-- </section> -->
+          </div>
+          <div class="gift-don">
+            <!-- <section> -->
             <form name="gift-donation">
-              <p>Buy a gift</p>
+              <h3>Buy a gift</h3>
               <select name="gift" size="1">
                 <option name="doll" value="doll">Doll /price 150kr/</option>
                 <option name="lego" value="lego">Lego set /price 500kr/</option>
@@ -128,9 +205,10 @@
                 >
               </select>
               <br />
-              <input type="submit" />
+              <input class="style-button" type="submit" value="Donate" />
             </form>
-          </section>
+            <!-- </section> -->
+          </div>
         </div>
       </div>
 

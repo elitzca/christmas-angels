@@ -67,7 +67,7 @@ fetch("https://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/users/" + userId)
         children += Math.floor(amount / 100); //calculate at least how many children will the donated amount make happy
         //every 100kr make 1 child happy
         console.log(children);
-        document.querySelector("div#amount-don h3").innerHTML = amount + "kr"; //...
+        document.querySelector("p#amount-donated").innerHTML = amount + "kr"; //...
 
         // FETCHING GIFTS (nested in the money fetch)
         // Because fetch is asynchronous, we need to wait for "fetch money" to finish resolving first, then we fetch the gifts
