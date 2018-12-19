@@ -13,52 +13,22 @@
   </head>
 
   <body class="profile-app">
-    <aside class="snow-cont aside-left ">
-      <img
-        id="sf1"
-        class="snow"
-        src="images/Snowflakes-Transparent-Background-PNG.png"
-        alt=""
-      />
-      <img
-        id="sf2"
-        class="snow"
-        src="images/Snowflakes-Transparent-Background-PNG.png"
-        alt=""
-      />
-      <img
-        id="sf3"
-        class="snow"
-        src="images/Snowflakes-Transparent-Background-PNG.png"
-        alt=""
-      />
-      <img
-        id="sf4"
-        class="snow"
-        src="images/Snowflakes-Transparent-Background-PNG.png"
-        alt=""
-      />
-      <img
-        id="sf5"
-        class="snow"
-        src="images/Snowflakes-Transparent-Background-PNG.png"
-        alt=""
-      />
-    </aside>
+    <aside class="snow-wrap"><div class="snow"></div></aside>
 
     <main>
       <!---->
-      <nav></nav>
-
-      <h1>Hello, <span id="user-name">user</span>!</h1>
-
+      
+     <div class="top-div">
+        <h1>Hello, <span id="user-name">user</span>!</h1>
+        <a id="log-out"><p>Log out</p></a>
+      </div>
       <div class="welcome-text">
         <p>
           It is nice to have you here! We are glad you decided to help spread
           the love and happiness this Christmas! In the spirit of the holiday
-          our mission is to be good and give something little to those less
-          fortunate than us! Your donations will be turned into gifts for
-          children in foster care.
+          our mission is to be good and give something to those less fortunate
+          than us! Your donations will be turned into gifts for children in
+          foster care.
         </p>
         <p>
           Each and every donation is valuable! The only rule is that it comes
@@ -190,6 +160,9 @@
             <!-- <section> -->
             <form name="gift-donation">
               <h3>Buy a gift</h3>
+              <button id="view-gifts" class="style-button">
+                View all gifts
+              </button>
               <select name="gift" size="1">
                 <option name="doll" value="doll">Doll /price 150kr/</option>
                 <option name="lego" value="lego">Lego set /price 500kr/</option>
@@ -212,10 +185,10 @@
         </div>
       </div>
 
-      <button id="log-out">Log out</button>
+      
     </main>
 
-    <aside class="snow-cont aside-right"></aside>
+    <aside class="snow-wrap"><div class="snow"></div></aside>
   </body>
   <script src="scripts/profile.js"></script>
 </html>

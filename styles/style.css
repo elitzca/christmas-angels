@@ -31,9 +31,49 @@ button {
 
 /* ###################################
 
+SNOW:
+
+################################### */
+@media only screen and (min-width: 1025px) {
+  .snow {
+    width: 240px;
+    margin: auto;
+    height: 1200px;
+    background-image: url(../images/snow-240x4800.png);
+    animation: letItSnow 50s linear infinite;
+  }
+
+  .snow-wrap {
+    width: 240px;
+  }
+
+  @keyframes letItSnow {
+    to {
+      background-position-y: 4800px;
+    }
+  }
+}
+/* ###################################
+
 PROFILE PAGE:
 
 ################################### */
+.top-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.top-div a {
+  cursor: pointer;
+  font-size: 1.4em;
+}
+
+.top-div a p {
+  text-decoration: underline;
+  float: right;
+  margin: 7% 13% 0 0;
+}
+
 input {
   border: none;
   border-bottom: 2px solid black;
@@ -51,19 +91,6 @@ input {
   display: block;
   margin: auto;
   max-width: 80%;
-}
-
-.snow {
-  max-width: 40px;
-}
-
-#sf1 {
-  transform: translate(-8vw, -10vh);
-  animation: letItSnow1 10s ease-out infinite;
-}
-
-#sf2 {
-  transform: translate(-18vw, -14vh);
 }
 
 @keyframes letItSnow1 {
@@ -174,11 +201,21 @@ img#cc {
   background-color: #b3283f;
   font-family: "ZCOOL XiaoWei", serif;
   color: snow;
+  cursor: pointer;
 }
 
 #save-card-btn,
+#view-gifts,
 .cc-anim button {
   background-color: #5e7151;
+}
+
+#view-gifts {
+  color: black;
+  background-color: #8db8af;
+  border: 1px solid black;
+  margin: 0;
+  position: relative;
 }
 
 p#amount-donated,
@@ -186,6 +223,26 @@ p#amount-donated,
   font-size: 1.2em;
   font-weight: bolder;
   color: #b3283f;
+}
+
+select {
+  background-color: transparent;
+}
+
+select option {
+  padding: 4px 10px;
+  background-color: rgba(192, 192, 197, 0.418);
+  border-bottom: 1px solid snow;
+}
+
+.gift-don select {
+  background-color: #ece9deda;
+  padding: 4px;
+}
+
+.gift-don select option {
+  background-color: #dcd8cd;
+  border: 1px solid snow;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -200,9 +257,13 @@ p#amount-donated,
     border-radius: 40px;
   }
 
-  body.profile-app {
-    margin: 6% 0;
-    padding: 0vh 20%;
+  body {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  main {
+    padding: 6% 0;
   }
 
   .grid-top,
@@ -226,6 +287,10 @@ p#amount-donated,
   .grid-sq-3 img {
     height: 13vw;
     margin: 0 0 0 20%;
+  }
+
+  .grid-sq-3 {
+    margin: 0 0 12% 0;
   }
 
   .user-card,
