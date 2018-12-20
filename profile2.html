@@ -17,8 +17,8 @@
 
     <main>
       <!---->
-      
-     <div class="top-div">
+
+      <div class="top-div">
         <h1>Hello, <span id="user-name">user</span>!</h1>
         <a id="log-out"><p>Log out</p></a>
       </div>
@@ -111,7 +111,7 @@
               />
             </form>
             <div class="cc-anim">
-              <img id="cc" src="images/cc-600-400.png" alt="" />
+              <img id="cc" src="images/cc-600-400-blue.png" alt="" />
               <button class="style-button">Edit details</button>
             </div>
           </div>
@@ -153,7 +153,13 @@
               </div>
               <input class="style-button" type="submit" value="Donate" />
             </form>
-
+            <div id="insuff1" class="hidden">
+              <h3>
+                Donations can't be proceeded at this moment because of
+                insufficient credit card information!
+              </h3>
+              <p>Please edit your payment information.</p>
+            </div>
             <!-- </section> -->
           </div>
           <div class="gift-don">
@@ -180,12 +186,18 @@
               <br />
               <input class="style-button" type="submit" value="Donate" />
             </form>
+            <div id="insuff2" class="hidden">
+              <h3>
+                Donations can't be proceeded at this moment because of
+                insufficient credit card information!
+              </h3>
+              <p>Please edit your payment information.</p>
+            </div>
+
             <!-- </section> -->
           </div>
         </div>
       </div>
-
-      
     </main>
 
     <aside class="snow-wrap"><div class="snow"></div></aside>

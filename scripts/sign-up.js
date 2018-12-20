@@ -6,18 +6,7 @@ const logCorner = document.querySelector("#logCorner");
 const signCorner = document.querySelector("#signCorner");
 const signUpDiv = document.querySelector("#sign-up-part");
 const signSucc = document.querySelector("#sign-successful");
-// logCorner.addEventListener("click", function() {
-//   console.log("i was clicked");
-//   document.querySelector("section#sign-up").classList.add("hidden");
-//   document.querySelector("section#log-in").classList.remove("hidden");
-// });
-// signCorner.addEventListener("click", function() {
-//   document.querySelector("section#log-in").classList.add("hidden");
-//   document.querySelector("section#sign-up").classList.remove("hidden");
-// });
-// if (localStorage.getItem("id")) {
-//   console.log("you are logged");
-// }
+
 formSignUp.addEventListener("submit", e => {
   e.preventDefault();
   // console.log(form.elements);

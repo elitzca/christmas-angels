@@ -30,6 +30,11 @@ saveCardBut.addEventListener("click", e => {
   cardForm.classList.add("hidden");
   ccDiv.classList.remove("hidden");
   ccImg.classList.add("turn");
+
+  document.querySelector("#insuff1").classList.add("hidden");
+  document.querySelector("#insuff2").classList.add("hidden");
+  document.querySelector(".money-don form").classList.remove("hidden");
+  document.querySelector(".gift-don form").classList.remove("hidden");
 });
 
 editBut.addEventListener("click", editDetails);
@@ -175,7 +180,13 @@ donationFormMoney.addEventListener("submit", e => {
     createdAt: Date.now(),
     userId
   };
-  if (localStorage.getItem("ccName")) {
+  if (
+    localStorage.getItem("ccName") &&
+    localStorage.getItem("ccNumber") &&
+    localStorage.getItem("ccMonth") &&
+    localStorage.getItem("ccYear") &&
+    localStorage.getItem("ccCVV")
+  ) {
     fetch(`https://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/money`, {
       method: "post",
       body: JSON.stringify(mySum),
@@ -190,7 +201,11 @@ donationFormMoney.addEventListener("submit", e => {
         location.reload();
       });
   } else {
-    alert("no credit card info");
+    // alert("no credit card info");
+    document.querySelector(".money-don form").classList.add("hidden");
+    document.querySelector(".gift-don form").classList.add("hidden");
+    document.querySelector("#insuff1").classList.remove("hidden");
+    document.querySelector("#insuff2").classList.remove("hidden");
   }
 });
 

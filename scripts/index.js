@@ -7,6 +7,7 @@ const detailsModal = document.querySelector("#modal-window");
 const studentModal = document.querySelector("#studentModal");
 
 const logInLink = document.querySelector("#log-link");
+const donateBtn = document.querySelector("button#donate");
 
 let moneyDonated = 0;
 let giftsDon = 0;
@@ -47,6 +48,7 @@ fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/gifts")
   });
 
 logInLink.addEventListener("click", showModal);
+donateBtn.addEventListener("click", showModal);
 
 function showModal() {
   detailsContainer.classList.remove("hiddenVisibility");
