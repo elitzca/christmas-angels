@@ -17,6 +17,8 @@ const cardForm = document.querySelector(".user-card form");
 
 ccDiv.classList.add("hidden");
 
+//Saving the input credit card information in the local storage
+
 saveCardBut.addEventListener("click", e => {
   e.preventDefault();
   localStorage.setItem("ccName", ccName.value);
@@ -48,23 +50,33 @@ ccMonth.value = localStorage.getItem("ccMonth");
 ccYear.value = localStorage.getItem("ccYear");
 ccCVV.value = localStorage.getItem("ccCVV");
 
+//1.fetch the logged in user from the API 2.and his profile data)
 fetch("https://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/users/" + userId)
   .then(res => res.json())
   .then(data => {
-    let children = 0;
+    let children = 0; //set the X children happy var
+    //fetch money array from API
     fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/money")
       .then(res => res.json())
       .then(data => {
-        let amount = 0;
+        console.log(data);
+        let amount = 0; //set donated amount
+        // 1. loop through the single donation object
+        // 2. if the object /from the API/ userId is the same as the userID in the localStorage
+        // 3. then sum all the donated amounts
         data.forEach(donation => {
           if (donation.userId == userId) {
             amount += donation.amount;
           }
         });
-        children += Math.floor(amount / 100);
+        children += Math.floor(amount / 100); //calculate at least how many children will the donated amount make happy
+        //every 100kr make 1 child happy
         console.log(children);
-        document.querySelector("p#amount-donated").innerHTML = amount + "kr";
+        document.querySelector("p#amount-donated").innerHTML = amount + "kr"; //...
 
+        // FETCHING GIFTS (nested in the money fetch)
+        // Because fetch is asynchronous, we need to wait for "fetch money" to finish resolving first, then we fetch the gifts
+        // This is so that we can add the number of children correctly
         fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/gifts")
           .then(res => res.json())
           .then(data => {
@@ -75,11 +87,14 @@ fetch("https://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/users/" + userId)
             let book = 0;
             let horse = 0;
             let lego = 0;
-
+            // 1. Loop through the array of Gifts
+            // 2. check if there is an object /in the API/ with a userId equal to the one in the localStorage
+            // 3. sum the different presents, if(they exist)
             data.forEach(giftDonation => {
               if (giftDonation.userId == userId) {
                 console.log(giftDonation);
                 if (giftDonation.gift.doll) {
+                  //check if it exists
                   doll += giftDonation.gift.doll;
                 }
                 if (giftDonation.gift.car) {
@@ -99,10 +114,12 @@ fetch("https://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/users/" + userId)
                 }
               }
             });
-            children += doll + car + lego + book + horse + puzzle;
+            children += doll + car + lego + book + horse + puzzle; //calculate at least how many children will the donated gifts make happy
+            //every gift makes 1 child happy
             console.log(children);
-            document.querySelector("#children-happy").innerHTML = children;
+            document.querySelector("#children-happy").innerHTML = children; //...
 
+            //display how many and what gift the user has donated
             const giftList = document.querySelector("#gifts-don");
             if (doll > 0) {
               giftList.insertAdjacentHTML(
@@ -148,6 +165,7 @@ fetch("https://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/users/" + userId)
     helloUser(data);
   });
 
+//puts the user's first name in the greeting above
 function helloUser(data) {
   // console.log();
   document.querySelector("#user-name").innerHTML = data.firstName;
@@ -183,6 +201,7 @@ donationFormMoney.addEventListener("submit", e => {
         location.reload();
       });
   } else {
+    // alert("no credit card info");
     document.querySelector(".money-don form").classList.add("hidden");
     document.querySelector(".gift-don form").classList.add("hidden");
     document.querySelector("#insuff1").classList.remove("hidden");

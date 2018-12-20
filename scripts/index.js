@@ -4,7 +4,6 @@ const detailsContainer = document.querySelector("#modal-container");
 const modalBlack = document.querySelector("#modal-black");
 const closeDetailsButton = document.querySelector("#close-button");
 const detailsModal = document.querySelector("#modal-window");
-const studentModal = document.querySelector("#studentModal");
 
 const logInLink = document.querySelector("#log-link");
 const donateBtn = document.querySelector("button#donate");
@@ -55,9 +54,9 @@ function showModal() {
   modalBlack.classList.remove("hiddenVisibility");
 }
 
-closeDetailsButton.addEventListener("click", closeDetails);
+closeDetailsButton.addEventListener("click", closeModal);
 
-function closeDetails() {
+function closeModal() {
   detailsContainer.classList.add("hiddenVisibility");
   modalBlack.classList.add("hiddenVisibility");
 }

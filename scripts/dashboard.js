@@ -5,6 +5,7 @@ let moneyDonated = 0;
 let peopleDon = 0;
 let giftsDon = 0;
 let childrenHappy = 0;
+let progressPercent;
 
 fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/gifts")
   .then(res => res.json())
@@ -67,6 +68,7 @@ fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/gifts")
       giftsDon = doll + car + puzzle + book + horse + lego;
       console.log(giftsDon);
       document.querySelector(".gifts-total h3").innerHTML = giftsDon;
+      document.querySelector("#presents .number").innerHTML = giftsDon;
     });
   });
 
@@ -81,7 +83,10 @@ fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/money")
     //-> show in html
     console.log(moneyDonated);
     document.querySelector(".money-total h3").innerHTML = moneyDonated;
-
+    document.querySelector("#goal span").innerHTML = moneyDonated;
+    progressPercent = moneyDonated / 100 + "%";
+    document.querySelector("div#progress").style.width = progressPercent;
+    document.querySelector("div#percent p.number").innerHTML = progressPercent;
     // moneyDonations.forEach(donation => {
     //     moneyDonated = moneyDonated + donation.amount;
     //     console.log(moneyDonated = moneyDonated + donation.amount)
@@ -116,5 +121,6 @@ fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/money")
         console.log(childrenHappy);
 
         document.querySelector(".children-happy h3").innerHTML = childrenHappy;
+        document.querySelector("#children .number").innerHTML = childrenHappy;
       });
   });

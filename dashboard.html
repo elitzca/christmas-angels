@@ -5,62 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
-    <style>
-      section {
-        margin: 5%;
-      }
-
-      .donations-raised {
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20%;
-      }
-
-      .gifts-raised {
-        display: grid;
-        grid-template-columns: repeat(7, 12%);
-        grid-gap: 2%;
-      }
-
-      .gifts-raised div {
-        padding: 12%;
-        background-color: rgb(135, 135, 216);
-      }
-
-      .don-bar {
-        position: relative;
-      }
-
-      .bar-background {
-        position: relative;
-        width: 600px;
-        height: 30px;
-        background-color: rgb(250, 231, 178);
-      }
-
-      .money-bar {
-        position: absolute;
-        width: 20px;
-        height: 30px;
-        background-color: darkgoldenrod;
-        top: 0;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/dashboard.css" />
   </head>
   <body>
     <section class="donations-raised">
       <div class="money-total">
+        <img src="images/icon-money.png" alt="" class="icon" />
         <p>Money donated in total</p>
         <h3></h3>
       </div>
       <div class="people-total">
+        <img src="images/icon-people.png" alt="" class="icon" />
         <p>Number of people donated in total</p>
         <h3></h3>
       </div>
       <div class="money-average">
+        <img src="images/icon-average.jpg" alt="" class="icon" />
         <p>Average sum people donate</p>
         <h3></h3>
       </div>
       <div class="children-happy">
+        <img src="images/icon-children.png" alt="" class="icon" />
         <p>Number of children with gift</p>
         <h3></h3>
       </div>
@@ -68,39 +37,61 @@
 
     <section class="gifts-raised">
       <div class="gifts-total">
+        <img src="images/icon-gift.png" alt="" class="pic" />
         <p>Gifts donated in total</p>
         <h3></h3>
       </div>
       <div class="dolls-div">
+        <img src="images/g-doll.png" alt="" class=" pic" />
         <p>DOLLS</p>
         <h3></h3>
       </div>
       <div class="cars-div">
+        <img src="images/g-car.png" alt="" class=" pic" />
         <p>CARS</p>
         <h3></h3>
       </div>
       <div class="lego-div">
+        <img src="images/g-lego.png" alt="" class=" pic" />
         <p>LEGO</p>
         <h3></h3>
       </div>
       <div class="puzzle-div">
+        <img src="images/g-puzzle.png" alt="" class=" pic" />
         <p>PUZZLE</p>
         <h3></h3>
       </div>
       <div class="horses-div">
+        <img src="images/g-horse.png" alt="" class=" pic" />
         <p>HORSES</p>
         <h3></h3>
       </div>
       <div class="books-div">
+        <img src="images/g-book.png" alt="" class=" pic" />
         <p>BOOKS</p>
         <h3></h3>
       </div>
     </section>
 
-    <section class="don-bar">
-      <div class="bar-background"></div>
-      <div class="money-bar"></div>
-    </section>
+    <div id="thermometer">
+      <h2>The way the fundraiser thermomether looks on the website:</h2>
+      <p id="goal"><span>X</span>dkk / 10 000dkk</p>
+      <div id="whole-bar"><div id="progress"></div></div>
+      <div class="stats">
+        <div id="children">
+          <p class="number">x</p>
+          <p class="text">Children will receive a gift</p>
+        </div>
+        <div id="presents">
+          <p class="number">x</p>
+          <p class="text">Gifts donated</p>
+        </div>
+        <div id="percent">
+          <p class="number">%</p>
+          <p class="text">Funded</p>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="scripts/dashboard.js"></script>
 </html>
