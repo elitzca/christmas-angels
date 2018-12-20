@@ -1,7 +1,7 @@
 $champagne: #dcd8cd;
 $beige: #c1b09e;
 $brown: #7a5d53;
-$lightBlue: #8db8af;
+$lightBlue: #a5cfc6;
 $lightGreen: #839d5c;
 $darkGreen: #5e7151;
 $red: #b3283f;
@@ -42,6 +42,118 @@ button {
 
 /* ###################################
 
+NAVIGATION:
+
+################################### */
+
+nav.navigation-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  margin: 0;
+  padding: 0;
+  background-color: $lightBlue;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    margin-top: 8vh;
+  }
+  .icons-wrapper {
+    display: grid;
+    height: 6vh;
+    grid-template-columns: 50% 50%;
+  }
+  .icons-wrapper img {
+    width: 5vh;
+  }
+  img#burger-menu {
+    margin: 1vh 0 0 5vw;
+  }
+  img#cross {
+    width: 4vh;
+    margin: 1vh 5vw 0 37vw;
+  }
+  .navigation-items-wrapper {
+    width: 100%;
+    height: 94vh;
+    background-color: #e0f5f0f1;
+    transform: translateX(-100vw);
+  }
+  ul.navigation-items {
+    padding: 20% 0;
+  }
+  li.navigation-item {
+    font-size: 2em;
+    padding: 5% 20%;
+  }
+  li.navigation-item a {
+    color: $darkRed;
+  }
+  .showMenu {
+    animation: slideMenu 1s ease forwards;
+  }
+
+  @keyframes slideMenu {
+    from {
+      transform: translate(-100vw, 0);
+    }
+    to {
+      transform: translate(0vw, 0);
+    }
+  }
+
+  .hideMenu {
+    animation: hideMenu 1s ease forwards;
+  }
+
+  @keyframes hideMenu {
+    from {
+      transform: translate(0vw, 0);
+    }
+    to {
+      transform: translate(-100vw, 0);
+    }
+  }
+}
+
+//DESKTOP NAV
+@media only screen and (min-width: 1025px) {
+  section {
+    padding-top: 10vh;
+  }
+  section#home {
+    padding-top: 2vh;
+  }
+  .icons-wrapper {
+    display: none;
+  }
+
+  nav.navigation-sticky {
+    width: 60%;
+    height: 8vh;
+    background-color: $white;
+  }
+  .navigation-items {
+    margin: 2vh 0;
+    font-size: 1.3em;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+  .navigation-items li {
+    display: inline;
+  }
+  a {
+    color: $darkRed;
+  }
+  #log-link {
+    float: right;
+  }
+}
+/* ###################################
+
 SNOW:
 
 ################################### */
@@ -64,6 +176,12 @@ SNOW:
       background-position-y: 4800px;
     }
   }
+}
+
+//INDEX.HTML
+
+.app h1 {
+  text-decoration: underline;
 }
 
 /* ###################################
@@ -121,7 +239,7 @@ input {
   }
 }
 
-body.profile-app {
+body {
   background-color: $white;
   font-family: $mainFont;
 }
@@ -389,4 +507,48 @@ select option {
   .grid-top {
     margin-bottom: 4%;
   }
+}
+// **********************
+// MAIN PAGE
+// **********************
+img#cover {
+  max-width: 80%;
+  padding: 6%;
+  margin: 2% 4%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.616) 0px 0px 25px;
+}
+// THERMOMETER -idea taken from https://codepen.io/robotballoon/pen/Fjnyp
+// **********************
+div#thermometer {
+  max-width: 80%;
+  margin: 3% 10%;
+  font-size: 1.1em;
+}
+p#goal {
+  text-align: right;
+  font-weight: bolder;
+}
+div#whole-bar {
+  width: 100%;
+  height: 20px;
+  background-color: $lightBlue;
+  border-radius: 10px;
+  float: left;
+  overflow: hidden;
+}
+div#progress {
+  float: left;
+  width: 5%;
+  height: 20px;
+  background-color: $red;
+  z-index: 2;
+}
+div.stats div {
+  width: 29%;
+  padding: 2%;
+  float: left;
+}
+div.stats div p {
+  margin: 1%;
 }

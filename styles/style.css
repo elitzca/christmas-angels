@@ -31,6 +31,129 @@ button {
 
 /* ###################################
 
+NAVIGATION:
+
+################################### */
+nav.navigation-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  margin: 0;
+  padding: 0;
+  background-color: #a5cfc6;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    margin-top: 8vh;
+  }
+
+  .icons-wrapper {
+    display: grid;
+    height: 6vh;
+    grid-template-columns: 50% 50%;
+  }
+
+  .icons-wrapper img {
+    width: 5vh;
+  }
+
+  img#burger-menu {
+    margin: 1vh 0 0 5vw;
+  }
+
+  img#cross {
+    width: 4vh;
+    margin: 1vh 5vw 0 37vw;
+  }
+
+  .navigation-items-wrapper {
+    width: 100%;
+    height: 94vh;
+    background-color: #e0f5f0f1;
+    transform: translateX(-100vw);
+  }
+
+  ul.navigation-items {
+    padding: 20% 0;
+  }
+
+  li.navigation-item {
+    font-size: 2em;
+    padding: 5% 20%;
+  }
+
+  li.navigation-item a {
+    color: #812122;
+  }
+
+  .showMenu {
+    animation: slideMenu 1s ease forwards;
+  }
+
+  @keyframes slideMenu {
+    from {
+      transform: translate(-100vw, 0);
+    }
+    to {
+      transform: translate(0vw, 0);
+    }
+  }
+  .hideMenu {
+    animation: hideMenu 1s ease forwards;
+  }
+
+  @keyframes hideMenu {
+    from {
+      transform: translate(0vw, 0);
+    }
+    to {
+      transform: translate(-100vw, 0);
+    }
+  }
+}
+@media only screen and (min-width: 1025px) {
+  section {
+    padding-top: 10vh;
+  }
+
+  section#home {
+    padding-top: 2vh;
+  }
+
+  .icons-wrapper {
+    display: none;
+  }
+
+  nav.navigation-sticky {
+    width: 60%;
+    height: 8vh;
+    background-color: snow;
+  }
+
+  .navigation-items {
+    margin: 2vh 0;
+    font-size: 1.3em;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+
+  .navigation-items li {
+    display: inline;
+  }
+
+  a {
+    color: #812122;
+  }
+
+  #log-link {
+    float: right;
+  }
+}
+/* ###################################
+
 SNOW:
 
 ################################### */
@@ -53,6 +176,10 @@ SNOW:
     }
   }
 }
+.app h1 {
+  text-decoration: underline;
+}
+
 /* ###################################
 
 PROFILE PAGE:
@@ -105,7 +232,7 @@ input {
     opacity: 0;
   }
 }
-body.profile-app {
+body {
   background-color: snow;
   font-family: "ZCOOL XiaoWei", serif;
 }
@@ -212,7 +339,7 @@ img#cc {
 
 #view-gifts {
   color: black;
-  background-color: #8db8af;
+  background-color: #a5cfc6;
   border: 1px solid black;
   margin: 0;
   position: relative;
@@ -325,6 +452,51 @@ select option {
   .grid-top {
     margin-bottom: 4%;
   }
+}
+img#cover {
+  max-width: 80%;
+  padding: 6%;
+  margin: 2% 4%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.616) 0px 0px 25px;
+}
+
+div#thermometer {
+  max-width: 80%;
+  margin: 3% 10%;
+  font-size: 1.1em;
+}
+
+p#goal {
+  text-align: right;
+  font-weight: bolder;
+}
+
+div#whole-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #a5cfc6;
+  border-radius: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+div#progress {
+  float: left;
+  width: 5%;
+  height: 20px;
+  background-color: #b3283f;
+  z-index: 2;
+}
+
+div.stats div {
+  width: 29%;
+  padding: 2%;
+  float: left;
+}
+
+div.stats div p {
+  margin: 1%;
 }
 
 /*# sourceMappingURL=style.css.map */
