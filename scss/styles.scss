@@ -18,6 +18,10 @@ ul {
   z-index: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
@@ -182,6 +186,114 @@ SNOW:
 
 .app h1 {
   text-decoration: underline;
+}
+
+//MODAL WINDOW
+#modal-black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 20;
+}
+
+#modal-container {
+  position: absolute;
+  width: 30%;
+  display: block;
+  margin: 7% 35%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: $white;
+  border-radius: 30px;
+}
+
+.hiddenVisibility {
+  visibility: hidden;
+}
+
+#modal-window {
+  max-width: 70%;
+  margin: 4% 15% 4% 15%;
+}
+
+#close-button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding: 0.2em;
+  text-align: center;
+  font: bolder 1em $mainFont;
+  top: 1vw;
+  right: 1vw;
+  border: 1px solid black;
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: rgb(236, 88, 88);
+}
+
+.form-div {
+  display: block;
+  margin: auto;
+  text-align: center;
+  border-bottom: 2px dashed $lightBlue;
+}
+
+.app form {
+  display: inline-block;
+}
+
+.app form input {
+  color: black;
+  background-color: #a5cfc660;
+  padding: 1.5% 3%;
+  margin: 3% auto;
+}
+
+.form-div button,
+.form-div #submit-btn {
+  margin: 5% auto 10% auto;
+  padding: 3% 6%;
+  border: 2px solid black;
+  background-color: $lightBlue;
+  border-radius: 20px;
+}
+
+.form-green {
+  border-bottom: none;
+}
+
+.form-green form input {
+  background-color: #adca817c;
+}
+
+.form-green #submit-btn {
+  background-color: #9cbb6ec5;
+}
+
+#sign-successful {
+  margin: 20% auto 30% auto;
+}
+
+#wrong-user {
+  color: $red;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+//ABOUT
+@media only screen and (min-width: 1025px) {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .about-grid img {
+    max-width: 90%;
+  }
 }
 
 /* ###################################

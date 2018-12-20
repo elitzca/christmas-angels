@@ -232,7 +232,7 @@ donationFormGift.addEventListener("submit", e => {
 logOutBut.addEventListener("click", logOut);
 
 function logOut() {
-  window.location.href = "sign-up.html";
+  window.location.href = "index.html";
   localStorage.clear();
 }
 

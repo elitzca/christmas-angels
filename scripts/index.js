@@ -1,5 +1,13 @@
 "use strict";
 
+const detailsContainer = document.querySelector("#modal-container");
+const modalBlack = document.querySelector("#modal-black");
+const closeDetailsButton = document.querySelector("#close-button");
+const detailsModal = document.querySelector("#modal-window");
+const studentModal = document.querySelector("#studentModal");
+
+const logInLink = document.querySelector("#log-link");
+
 let moneyDonated = 0;
 let giftsDon = 0;
 let progressPercent;
@@ -8,14 +16,14 @@ let childrenHappy;
 fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/gifts")
   .then(res => res.json())
   .then(gifts => {
-    console.log(gifts);
+    // console.log(gifts);
     giftsDon = gifts.length;
     document.querySelector("#presents .number").innerHTML = giftsDon;
 
     fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/money")
       .then(res => res.json())
       .then(moneyDon => {
-        console.log(moneyDon);
+        // console.log(moneyDon);
         moneyDonated = moneyDon.reduce(
           (accumolator, value) => value.amount + accumolator,
           0
@@ -37,3 +45,17 @@ fetch("http://5bfd20f8827c3800139ae8df.mockapi.io/sign-in/gifts")
         ).innerHTML = childrenHappy;
       });
   });
+
+logInLink.addEventListener("click", showModal);
+
+function showModal() {
+  detailsContainer.classList.remove("hiddenVisibility");
+  modalBlack.classList.remove("hiddenVisibility");
+}
+
+closeDetailsButton.addEventListener("click", closeDetails);
+
+function closeDetails() {
+  detailsContainer.classList.add("hiddenVisibility");
+  modalBlack.classList.add("hiddenVisibility");
+}

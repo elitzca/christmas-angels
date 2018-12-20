@@ -65,30 +65,91 @@
 
       <section id="about">
         <h1>About Us</h1>
-        <p>
-          It's that time of the year again! To sit with a good book and a cup of
-          cinnamon tea in front of the fireplace. To hang stockings, make
-          snowmen and spend time with your family. But it's also time for magic
-          and miracles and being truly kind to one another. Christmas is all
-          about giving. Not just giving out of tradition or responsibility. It's
-          about giving to really make a difference and be a blessing to someone.
-        </p>
-        <p>
-          "Christmas angels" is a non-profit organization whose goal is to
-          ensure Christmas gifts for as many children in foster care as
-          possible. We believe that we can put smiles on the faces of these
-          innocent and unfortunate souls and that you will help us to do so! Our
-          close cooperation with toy distribution companies, foster care homes
-          and hands on experience makes us experts in helping Santa Claus spread
-          the happiness!
-        </p>
+        <div class="about-grid">
+          <img src="images/gifts-cartoon-400x355.png" alt="" />
+          <div>
+            <p>
+              It's that time of the year again! To sit with a good book and a
+              cup of cinnamon tea in front of the fireplace. To hang stockings,
+              make snowmen and spend time with your family. But it's also time
+              for magic and miracles and being truly kind to one another.
+              Christmas is all about giving. Not just giving out of tradition or
+              responsibility. It's about giving to really make a difference and
+              be a blessing to someone.
+            </p>
+            <p>
+              "Christmas angels" is a non-profit organization whose goal is to
+              ensure Christmas gifts for as many children in foster care as
+              possible. We believe that we can put smiles on the faces of these
+              innocent and unfortunate souls and that you will help us to do so!
+              Our close cooperation with toy distribution companies, foster care
+              homes and hands on experience makes us experts in helping Santa
+              Claus spread the happiness!
+            </p>
+          </div>
+        </div>
       </section>
-      
-      <div  class="modal-window"></div>
+
+      <div id="modal-black" class="hiddenVisibility">
+        <div id="modal-container" class="hiddenVisibility">
+          <span id="close-button">X</span>
+          <div id="modal-window">
+            <h3>Login as a Christmas angel and spread the happiness..</h3>
+            <div id="log-in" class="form-div">
+              <form>
+                <label>Username:</label> <br />
+                <input type="text" name="usernameLogIn" /> <br />
+                <p id="wrong-user" class="hidden">Username doesn't exist!</p>
+                <button>Log in</button>
+              </form>
+            </div>
+            <div id="sign-up-part" class="">
+              <p>Don't have an account?</p>
+              <p>No worries, it takes only 10sec to create one!</p>
+              <div id="sign-up" class="form-div form-green">
+                <form>
+                  <label>Username:</label> <br />
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    placeholder="username"
+                  />
+                  <br />
+                  <label>First name:</label> <br />
+                  <input
+                    id="first"
+                    type="text"
+                    name="firstName"
+                    placeholder="Ana"
+                  />
+                  <br />
+                  <label>Last name:</label> <br />
+                  <input
+                    id="last"
+                    type="text"
+                    name="lastName"
+                    placeholder="Brown"
+                  />
+                  <br />
+                  <input id="submit-btn" type="submit" name="submit-btn" />
+                </form>
+              </div>
+            </div>
+            <div id="sign-successful" class="hidden">
+              <h3>Account successfully created!</h3>
+              <p>
+                Please fill your username in the form above in order to log in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <aside class="snow-wrap"><div class="snow"></div></aside>
   </body>
   <script src="scripts/index.js"></script>
   <script src="scripts/menu.js"></script>
+  <script src="scripts/sign-up.js"></script>
 </html>
