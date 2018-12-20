@@ -49,11 +49,12 @@ nav.navigation-sticky {
   z-index: 10;
 }
 
-@media only screen and (max-width: 1024px) {
-  section {
-    margin-top: 8vh;
-  }
+.app section {
+  padding-top: 8vh;
+  margin-top: 8vh;
+}
 
+@media only screen and (max-width: 1024px) {
   .icons-wrapper {
     display: grid;
     height: 6vh;
@@ -120,11 +121,16 @@ nav.navigation-sticky {
 }
 @media only screen and (min-width: 1025px) {
   section#home {
-    padding-top: 2vh;
+    margin-top: 0;
   }
 
   section#about {
-    padding-top: 10vh;
+    transform: translateY(10vh);
+    margin-top: 3vh;
+  }
+
+  #about h1 {
+    margin: 5vh 0 2vh 0;
   }
 
   .icons-wrapper {
@@ -165,7 +171,7 @@ SNOW:
   .snow {
     width: 240px;
     margin: auto;
-    height: 1200px;
+    height: 100%;
     background-image: url(../images/snow-240x4800.png);
     animation: letItSnow 50s linear infinite;
   }
@@ -182,7 +188,7 @@ SNOW:
 }
 .app h1 {
   text-decoration: underline;
-  margin: 10vh 0 2vh 0;
+  margin: 1vh 0 2vh 0;
 }
 
 #modal-black {
@@ -300,25 +306,25 @@ SNOW:
   top: 5%;
 }
 
+.gifts-grid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 5%;
+}
+
+.gifts-grid img {
+  max-width: 100%;
+}
+
+.gifts-grid p,
+.gifts-grid h6 {
+  margin: 0 0 0 7%;
+}
+
 @media only screen and (min-width: 1025px) {
   .don-grid {
     display: grid;
     grid-template-columns: 40% 60%;
-  }
-
-  .gifts-grid {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 5%;
-  }
-
-  .gifts-grid img {
-    max-width: 100%;
-  }
-
-  .gifts-grid p,
-.gifts-grid h6 {
-    margin: 0 0 0 7%;
   }
 
   #don-desc {
@@ -340,7 +346,7 @@ SNOW:
   .partners-grid {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
 
   .partners-grid img {
@@ -561,6 +567,22 @@ select option {
     margin: auto;
   }
 }
+.grid-sq-2,
+.grid-sq-3 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.grid-sq-2 img {
+  width: 90%;
+  margin: 0 0 0 5%;
+}
+
+.grid-sq-3 img {
+  height: 13vw;
+  margin: 0 0 0 20%;
+}
+
 @media only screen and (min-width: 1025px) {
   .present-background {
     background-color: #b3283f;
@@ -577,22 +599,6 @@ select option {
     display: grid;
     grid-template-columns: 48% 48%;
     grid-gap: 4%;
-  }
-
-  .grid-sq-2,
-.grid-sq-3 {
-    display: grid;
-    grid-template-columns: 40% 60%;
-  }
-
-  .grid-sq-2 img {
-    width: 90%;
-    margin: 0 0 0 5%;
-  }
-
-  .grid-sq-3 img {
-    height: 13vw;
-    margin: 0 0 0 20%;
   }
 
   .grid-sq-3 {
@@ -676,6 +682,119 @@ div.stats div {
 
 div.stats div p {
   margin: 1%;
+}
+
+@media only screen and (max-width: 1024px) {
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    width: 86%;
+    display: block;
+    margin: 3vh auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  section {
+    margin-top: 0;
+  }
+
+  section#about {
+    transform: translateY(8vh);
+  }
+
+  #about h1 {
+    text-align: left;
+  }
+
+  #about img {
+    width: 40%;
+    margin: 2vh auto 0 auto;
+  }
+
+  #partners {
+    padding-bottom: 20vh;
+  }
+
+  #partners h1 {
+    margin-bottom: 5vh;
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 5%;
+  }
+
+  .partners-grid img {
+    max-width: 80%;
+  }
+
+  #modal-container {
+    width: 80%;
+    margin: 15% 10%;
+  }
+
+  .top-div {
+    grid-template-columns: 60% 40%;
+  }
+
+  .top-div h1 {
+    margin: 7% 0 0 11%;
+    text-align: left;
+  }
+
+  .top-div a p {
+    text-align: right;
+    margin: 12% 17% 0 0;
+  }
+
+  .square {
+    padding: 10%;
+    margin: 0 0 3vh 0;
+  }
+
+  .square h3 {
+    margin: 0;
+    padding: 0 0 10% 0;
+  }
+
+  .square img {
+    max-width: 70%;
+  }
+
+  .user-card {
+    height: 35vh;
+  }
+
+  .money-don div img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+}
+footer.gift-section {
+  width: 100%;
+  height: 1vh;
+  margin: 5vh auto 3vh auto;
+  background-color: transparent;
+  text-align: center;
+  padding: 0;
+}
+
+.square select {
+  margin-top: 3vh;
+  margin-bottom: 6vh;
+}
+
+@media only screen and (min-width: 1025px) {
+  #santa {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

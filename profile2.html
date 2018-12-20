@@ -66,7 +66,7 @@
 
       <div class="present-background">
         <div class="grid-top">
-          <div class="user-card">
+          <div class="user-card square">
             <h3>Payment information:</h3>
             <form name="payment-info">
               <div class="form-grid">
@@ -116,7 +116,7 @@
             </div>
           </div>
 
-          <div class="donation-info">
+          <div class="donation-info square">
             <div id="amount-don">
               <h3>To this moment you have donated:</h3>
               <div class="grid-sq-2">
@@ -135,7 +135,7 @@
         </div>
 
         <div class="donations-grid">
-          <div class="money-don">
+          <div class="money-don square">
             <!-- <section> -->
             <form name="money-donation">
               <div class="grid-sq-3">
@@ -149,7 +149,7 @@
                     <option value="200">500kr</option>
                   </select>
                 </div>
-                <div><img src="images/pig-300x385.png" alt="" /></div>
+                <div><img src="images/pig.png" alt="" /></div>
               </div>
               <input class="style-button" type="submit" value="Donate" />
             </form>
@@ -162,13 +162,36 @@
             </div>
             <!-- </section> -->
           </div>
-          <div class="gift-don">
+          <div class="gift-don square">
             <!-- <section> -->
             <form name="gift-donation">
               <h3>Buy a gift</h3>
-              <button id="view-gifts" class="style-button">
-                View all gifts
-              </button>
+              <div class="gifts-grid">
+                <div class="gift-cont">
+                  <img class="gift-drawing" src="images/hand-gift.png" alt="" />
+                  <img class="gift-pic" src="images/g-doll.png" alt="" />
+                </div>
+                <div class="gift-cont">
+                  <img class="gift-drawing" src="images/hand-gift.png" alt="" />
+                  <img class="gift-pic" src="images/g-lego.png" alt="" />
+                </div>
+                <div class="gift-cont">
+                  <img class="gift-drawing" src="images/hand-gift.png" alt="" />
+                  <img class="gift-pic" src="images/g-puzzle.png" alt="" />
+                </div>
+                <div class="gift-cont">
+                  <img class="gift-drawing" src="images/hand-gift.png" alt="" />
+                  <img class="gift-pic" src="images/g-car.png" alt="" />
+                </div>
+                <div class="gift-cont">
+                  <img class="gift-drawing" src="images/hand-gift.png" alt="" />
+                  <img class="gift-pic" src="images/g-book.png" alt="" />
+                </div>
+                <div class="gift-cont">
+                  <img class="gift-drawing" src="images/hand-gift.png" alt="" />
+                  <img class="gift-pic" src="images/g-horse.png" alt="" />
+                </div>
+              </div>
               <select name="gift" size="1">
                 <option name="doll" value="doll">Doll /price 150kr/</option>
                 <option name="lego" value="lego">Lego set /price 500kr/</option>
@@ -198,7 +221,15 @@
           </div>
         </div>
       </div>
+      <footer class="gift-section">Christmas Angels Fondation 2018</footer>
     </main>
+
+    <div id="modal-black" class="">
+      <div id="modal-container" class="">
+        <span id="close-button">X</span>
+        <img id="santa" src="images/santa.png" alt="" />
+      </div>
+    </div>
 
     <aside class="snow-wrap"><div class="snow"></div></aside>
   </body>
